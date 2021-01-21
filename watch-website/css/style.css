@@ -1,0 +1,629 @@
+@charset "UTF-8";
+/*Обнуление*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li {
+  list-style-type: none; /* Убираем маркеры */
+ }
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  }
+
+/*Обнуление end*/
+
+
+/*Fonts stars*/
+
+/*font-family: 'PT Sans', sans-serif;*/
+
+@font-face {
+	font-family: 'Conv_PostNoBillsJaffna-Regular';
+	src: url('../fonts/PostNoBillsJaffna-Regular.eot');
+	src: local('☺'), url('../fonts/PostNoBillsJaffna-Regular.woff') format('woff'), url('../fonts/PostNoBillsJaffna-Regular.ttf') format('truetype'), url('../fonts/PostNoBillsJaffna-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*font-family: 'Playfair Display', serif;*/
+
+/*Fonts end*/
+.header__complete{
+  width:100% ;
+  height: 800px;
+ background-image: url(/img/backgraunt_top.jpg);
+ background-position: 0 0;
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+  }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/*header__top start*/
+
+.header__band {
+  background-color: #000000;
+ }
+
+ .wrapper {
+   max-width: 1110px;
+   margin: 0 auto;
+ }
+
+.toptext-left .toptext-right {
+  display: block;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  max-width: 100%;
+  height: 44px;
+  padding-top: 14px;
+  letter-spacing: 0.2px;
+  color: #969696;
+  max-width: 1110px;
+  
+}
+
+.header__top-left {
+  display: flex;
+}
+
+.header__top-right {
+  display: flex;
+}
+
+
+.toptext-left {
+  margin-left: 14px;
+}
+
+.exit__logo {
+  margin-right: 6px;
+}
+
+.toptext-right {
+  margin-left: 0px;
+}
+
+/*header__top end*/
+
+/*navbar start*/
+
+.navbar {
+  max-width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex-basis: 573px;
+}
+
+.logo__title {
+  font-family: 'Conv_PostNoBillsJaffna-Regular';
+  font-size: 36px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo__title-decor {
+  transition-duration: 0.5s;
+}
+
+.navbar__item {
+  display: block;
+  transition-duration: 1s;
+}
+
+.navbar__text {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  flex-grow:1;
+  height: 80px;
+  padding-top: 31px;
+}
+
+.navbar__shopping {
+  text-align: right;
+  flex-grow:1;
+  transition-duration: 0.5s;
+}
+
+.navbar__search {
+  text-align: right;
+  flex-grow:1;
+  transition-duration: 0.5s;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #969696;
+}
+
+.navbar__item:hover {
+ background-color: #1F1F1F;
+ color: #ffffff;
+ transition-duration: 1s;
+}
+
+.logo__title-decor:hover {
+  transform: scale3d(1, 1.2, 1.2);
+  opacity: 0.8;
+  transition-duration: 1s;
+}
+
+.shopping-link:hover {
+  opacity: 0.6;
+  transition-duration: 1s;
+}
+
+.navbar__search:hover {
+  opacity: 0.6;
+  transition-duration: 1s;
+}
+/*navbar end*/
+
+/*title start*/
+
+.title {
+  max-width: 100%;
+  height: 810px;
+  background: url(/img/title.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 160px;
+}
+
+.title__logo {
+  margin: 0 auto;
+  width: 320px;
+  height: 320px;
+  border: 4px solid #FFFFFF;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 105px;
+  padding-left: 67px;
+}
+
+.title__brand {
+  display: table;
+  font-family: 'Conv_PostNoBillsJaffna-Regular';
+  font-size: 64px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #ffffff;
+}
+
+.title__subtitle {
+  display: table;
+  padding-left: 2px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 200;
+  margin-top: 7px;
+  text-transform: uppercase;
+}
+
+.title__text {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 80px;
+  line-height: 24px;
+}
+
+/*title end*/
+
+/*demonstration start*/
+
+.demonstration__top {
+  display: flex;
+  height: 730px;
+}
+
+.cards {
+  flex-basis:54%;
+  background-color: #000000;
+  padding-top: 100px;
+}
+
+.demonstration__img {
+  flex-basis:46%;
+  background: url(/img/demonstration__img-1.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.name-catalog {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cards__title {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.line {
+  width: 120px;
+  height: 1px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+.cards__row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.hours-img {
+  transition-duration: 1s;
+}
+
+.hours-img:hover {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  transition-duration: 2s;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  transition-duration: .5s;
+}
+
+.card-link:hover {
+  opacity: 0.7;
+  transition-duration: 1s;
+}
+
+.card-link:active {
+  font-size: 15px;
+}
+
+.card__img {
+  width: 265px;
+  height: 325px;
+  text-align: center;
+  padding-top: 55px;
+  background-color: #191B1C;
+}
+
+.card__subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.price {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.demonstration__title {
+  margin-top: 484px;
+}
+
+.button {
+  margin: 0 auto;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #FFFFFF;
+  transition-duration: 0.5s;
+}
+
+.button:hover {
+  opacity: 0.8;
+  background-color: rgba(19, 235, 48, 0.575);
+  border: 2px solid #FFFFFF;
+  transition-property: border;
+  transition-duration: 0s;
+  transition-property: background-color, opacity;
+  transition-duration: 1s;
+}
+
+.buttom__demonstration {
+  width: 138px;
+  margin-top: 40px;
+}
+
+.button__text {
+  display: block;
+  margin: 10px 0px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+
+.demonstration__bottom {
+  display: flex;
+  height: 600px;
+}
+
+.demonstration__img_bottom {
+  flex-basis:46%;
+  background: url(/img/demonstration__img-2.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition-duration: 1s;
+}
+  
+.demonstration__img_bottom:hover {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  transition-duration: 2s;
+}
+
+.demonstration__info {
+  flex-basis:54%;
+  background-color: #000000;
+}
+
+.demonstration__title_bottom {
+  margin-top: 100px;
+}
+
+.info__text {
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height: 21px;
+  margin-top: 40px;
+}
+
+.buttom__info {
+  margin-top: 60px;
+  width: 311px;
+}
+
+/*demonstration end*/
+
+
+/*product start*/
+
+.product {
+  background-color: black;
+  padding-top: 120px;
+  padding-bottom: 150px;
+}
+
+.product__row {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-bottom: 40px;
+}
+/*product end*/
+
+/*brands start*/
+.brands {
+  background-color: #0F0F0F;
+  padding-bottom: 80px;
+  padding-top: 60px;
+}
+
+.brads__row {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  transition-duration: 1s;
+}
+
+.icon:hover {
+  opacity: 0.6;
+  transition-duration: 1s;
+}
+
+
+/*brands end*/
+
+/*footer stars*/
+
+.footer {
+  width: 100%;
+  height: 400px;
+  background: url(/img/footer.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.items__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item__shop {
+  flex-basis: 350px;
+}
+
+.item__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.item__text {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.item__categories {
+  flex-grow: 1;
+  padding-left: 30px;
+}
+
+.categories__text {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 56px;
+  color: #FFFFFF;
+  }
+
+.categories-link {
+   text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+   background-color: black;
+   margin-right: 17px;
+   transition-duration: 0.5s;
+  }
+
+.categories-link:hover {
+  opacity: 0.7;
+  transition-duration: 1s;
+}
+
+
+  .mailing__subscription {
+    margin-top: 37px;
+    height: 42px;
+    display: flex;
+  }
+
+  .mailing__buttom {
+    background: black;
+    flex-grow:1;
+    transition-duration: 0.5s;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+
+  .mailing__buttom:hover, .mailing-link:hover {
+    transition-duration: 1s;
+    background-color: #1F1F1F;
+  }
+
+
+  .mailing-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .input__mail {
+    width: 210px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+
+  ::-webkit-input-placeholder {
+    text-indent: 10px;
+    color:#ffffff;
+  }
+/*footer end*/
+
+.minifooter {
+  background-color: black;
+  height: 50px;
+  color: #D0D0D0;
+  padding-top: 17px;
+  }
+
+  .minifooter__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .minifooter__left {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    display: block;
+  }
+
+  .minifooter__right {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+    display: block;
+  }
