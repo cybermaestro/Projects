@@ -2,10 +2,112 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = "watch-website"
+
+	mixin card(images, text, price)
+		.card__img 
+			img.hours-img(src= images, alt="hours")
+			h3.card__subtitle: a.card-link.link-w(href='#')= text
+			p.price: a.card-link.link-w.text_price(href='#')= price
 
 block content
+	header.header__band
+		.container
+			.header__top
+				.header__top_left
+					.telephone__logo.logo_press: img(src="img/svg/telephone.svg", alt="telephone")
+					p.toptext_left 8(812)123-45-67 | Работаем 7 дней в неделю | 9:00-18:00
+				.header__top_right
+					.exit__logo.logo_press: img(src="img/svg/exit.svg", alt="exit")
+					p.toptext_right: a.link-g.entrance(href='#') Войти/Регистрация					
+			
+			.navbar
+				.logo: a.logo__title.link-w(href='/') PORTER
+				.menu-burger__header
+					span
+					nav.header__nav
+						each t in ['Понравилось', 'личный кабинет', 'настройки']
+							a.navbar__item.navbar__text.link-w(href='#')=t
+						.navbar__shopping: a.shopping-link.logo_press(href='#')
+							img(src="img/svg/bx_bx-cart.svg", alt="bx-cart")
+						.navbar__search: a.search-link.logo_press(href='#')
+							img(src="img/svg/poisk.svg", alt="poisk")
+	
+	.title
+		.title__logo
+			h1.title__brand PORTEN
+			h2.title__subtitle санкт-петербург
+		.title__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus interdum purus, est tortor </br>
+					pulvinar ut in. Fringilla a diam enim sed justo, sed iaculis sagittis. Tortor id eu interdum </br>
+					nec ut iaculis. Penatibus ullamcorper ultricies morbi ipsum sem metus pharetra, mi.</br>
+					Tortor nibh magna feugiat id nunc, dui nisl viverra.	
+	
+	.demonstration__top
+		.cards
+			.cards__title.name-catalog
+				h2.name СЕЗОН 2020/21
+				.line
+			.cards__row
+				- for (var x = 0; x < 3; x++)
+					+card("img/svg/hours.svg", 'Louis XVI ATHOS', '165 000 руб.')
+		.demonstration__img
+			.demonstration__title.name-catalog
+				h2.name Новая коллекция
+				.line
+			.buttom__demonstration.button: a.button__text(href='#') Каталог	 
+	.demonstration__bottom
+		.demonstration__img_bottom
+		.demonstration__info
+			.blur
+			.demonstration__title_bottom.name-catalog
+				h2.name коллекция 2018
+				.line
+			p.info__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut </br> mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus </br> vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet </br> convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum </br> interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada </br> integer. Aeneun praesent viverra nulla nullam natoque volutpat curabitur </br> auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id  </br> aliquam a aliquam egestas leo orci pharetra sed diam.  
+			.buttom__info.button: a.button__text(href='#') посмотреть коллекцию		
+	.product
+		.container
+			.product__title.name-catalog
+				h2.name новые поступления
+				.line
+			.product__row
+				- for (var x = 0; x < 8; x++)
+					+card("img/svg/hours.svg", 'Louis XVI ATHOS', '165 000 руб.')
+	.brands
+		.container
+			.brands__title.name-catalog
+				h2.name наши бренды
+				.line
+			.brads__row
+				- for (var x = 0; x < 3; x++)
+					.icon: a.icon-link.link-w(href-'#')
+						img(src="img/svg/brands.svg", alt="brands")
+	.footer
+		.container
+			.items__row
+				.item__shop
+					h2.item__title О магазине
+					.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.
+				.item__categories
+					h2.item__title Категории
+					.categories__text
+						each n in ['часы', 'браслеты', 'ремни']
+							a.categories-link.link-w(href='#')= n
+						</br>	
+						each n in ['ювелирные изделия', 'запонки']
+							a.categories-link.link-w(href='#')= n	
+				.item__mailing
+					h2.item__title Рассылка
+					.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.		
+					.mailing__subscription
+						input.input__mail(placeholder="Ваша почта", tabindex="1", name="mail", type="text")
+						.mailing__buttom: a.mailing-link.link-g(href='#') Подписаться
+	.minifooter
+		.container
+			.minifooter__text
+				p.minifooter__left © 2020 Все права защищены
+				p.minifooter__right Сделано Figma.info					
 
 block scripts
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
 	script(src="js/main.js")
 	script(src="js/vendor.js")

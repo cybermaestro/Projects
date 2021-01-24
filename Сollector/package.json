@@ -62,6 +62,7 @@
         "imagemin-pngquant": "~9.0.0",
         "imagemin-webp": "^6.0.0",
         "imagemin-zopfli": "^7.0.0",
+        "jquery": "^3.5.1",
         "lint-staged": "^10.0.3",
         "require-dir": "^1.2.0",
         "stylelint": "^13.6.1",
@@ -88,3 +89,5 @@
         ]
     }
 }
+
+

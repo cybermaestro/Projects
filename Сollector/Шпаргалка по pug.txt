@@ -1,0 +1,127 @@
+1) pug = html
+span.text = <span class="text"></span>
+.block = <div class="block"></div>
+
+2) Передать содержимое блока
+// обычно делают так
+.block Текст внутри блока = <div class="block">Текст внутри блока</div>
+// а можно еще так
+.block
+  | Текст внутри блока
+// или так
+.block.
+  Текст внутри блока
+// или так
+p.
+	Текст внутри блока
+  
+3) Вложенность блока
+.block
+	.inner-block Текст внутреннего блока
+
+.sibling-block
+	| Текст соседнего блока
+
+<div class="block">
+	<div class="inner-block">
+		Текст внутреннего блока
+	</div>
+</div>
+
+<div class="sibling-block"
+	Текст соседнего блока
+</div>
+
+4) Атрибуты передаются в скобках перед определением класса
+// можно писать без запятой
+img(src="", alt="второй атрибут").img-class
+=
+<img class="img-class" src="" alt="второй атрибут"/>
+
+5) Можно делать перенос на первую строчку, если атрибутов много.  Чтобы улучшить читаемость кода
+input(
+	type="text"
+	placeholder="Введите имя"
+	required
+).input-class
+
+<input class="input-class" type="text" placeholder="Введите имя" required="required"/>
+
+6) Комментарии //- тогда они не компилируются, // тогда эти комментарии в html переносятся
+
+7) class и id для тегов
+h2.heading-1 Title = <h2 class="heading-1">Title</h2>
+p#text Text = <p id="text">Text</p>
+div.class-1.class-2#box Text inside = <div class="class-1 class-2" id="box">Text inside</div>
+// или так
+div(class="class-1 class-2" id="the-box") = <div class="class-1 class-2" id="the-box"></div>
+
+8) HTML атрибуты
+div(
+	class="text"
+	id="box"
+	data-value="5"
+	).
+	Text
+
+<div class="text" id="box" data-value="5">Text</div>
+
+9) Вложенность тегов
+div.box
+	h2 Title
+	p Text
+	ul
+		li
+			a Text
+
+<div class="box">
+	<h2>Title</h2>
+	<p>Text</p>
+	<ul>
+		<li><a>Text</a></li>
+	</ul>
+</div>
+
+10) Переменные
+- var name = "Text" // Строка, объект, массив или число
+h1 #{name} // использование переменной = <h1>Text</h1>
+// или так
+h1 Hello #{name}! = <h1>Hello Text!</h1>
+// можно использовать в атрибутах
+- var active = "active-item"
+div(class= active) // если класс один и это переменная, то ставим пробел после =
+// результат в html
+<h1>Hello Text!</h1>
+<div class="active-item"></div>
+// если класс элемента состоит из двух или трех классов и один из них переменная
+div(class="box box--wide " + active) =
+= <div class="box box--wide active-item"></div>
+
+11) Include подключение файлов
+include modules/header // для подключения хедер на главную с указанием пути
+
+12) extends наследование шаблонов
+extends layouts/master-page.pug // наследует и расширяет шаблон
+// для вставки нужного кода используем block в мастер-шаблоне,
+далее (на примере index.pug) пишем уже что нужно вставить сюда
+extends layouts/master-page.pug
+block content
+	h1 Main Page
+
+13) append prepend для блоков
+prepend // добавляет наш контент перед другим, оставляя его по умолчанию
+append // добавляет наш контент после, оставляя другой по умолчанию
+
+14) Миксины
+mixin <название>(передаем изменяемые значения)
+// пример миксина для карточки
+mixin card(img, title, price)
+	.card
+		img(src= img)
+		h2 #{title}
+		.price #{price}$
+
+// подключаем на страницу и вызывем в нужном месте кода
+include mixins/mixins.pug // название папки/название миксина. Расширение можно не указывать
++card("img/nokia.jpg", "Nokia", 35) // по очереди передаем параметры, указанные ранее.
+Цену можно передать как в "" так и числом, т.к. целочисленное значение
